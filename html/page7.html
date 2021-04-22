@@ -1,0 +1,133 @@
+<!DOCTYPE html >
+<html>
+    <head>
+        <title>Project Web Tech</title>
+        <link rel="stylesheet" href="page7.css">
+        <script>
+            function ps(){
+            console.log("pseudo 0: "+localStorage.getItem('pseudo0'));
+            console.log("pseudo 1: "+localStorage.getItem('pseudo1'));
+            console.log("pseudo 2: "+localStorage.getItem('pseudo2'));
+            console.log("comment 0: "+localStorage.getItem('comment0'));
+            console.log("comment 1: "+localStorage.getItem('comment1'));
+            console.log("comment 2: "+localStorage.getItem('comment2'));
+            
+            }
+            ps();
+            console.log("number star "+localStorage.getItem('star'));
+            function star(value){
+               
+                switch(value)
+                {
+                    case "yes":
+                    switch(localStorage.getItem('star'))
+                    {
+                        case "0":
+                        window.location.href="page5.html";
+                        localStorage.setItem('star', "1");
+                            break;
+                        case "1":
+                        window.location.href="page5.html";
+                        localStorage.setItem('star', "2");
+                            break;
+                        case "2":
+                        window.location.href="win.html";  
+                        localStorage.setItem('star', "3");  
+                            break;
+                            default:
+                                break;
+                    }
+                    break;
+                    case "no":
+                    window.location.href="fin.html";
+                    localStorage.setItem('fin',7);
+                        break;
+                    
+                }
+                
+            }
+
+            function getcomment(value){
+                switch(localStorage.getItem('star')){
+                    case "0":
+                    localStorage.setItem('comment0',value);
+                        break;
+                    case "1":
+                    localStorage.setItem('comment1',value);
+                        break;
+                    case "2":
+                    localStorage.setItem('comment2',value);
+                        break;
+                    default:
+                        break;
+                }
+            }
+   
+           function home(value){
+               localStorage.setItem('page',value);
+           }
+        </script>
+    </head>
+    <body>
+        <form action="acceuil.html"><button class="button_home"type="submit" onclick="home('7')">HOME</button></form>
+        <div class="divchoice"><img class="choice" src="images/menu.png"></div>
+        <div class="divtrip"><img class="trip"src="images/tripadvisor.png"></div>
+        
+        <div class="divdish">
+            <p class="dish" id="dish"></p>
+            <img class="img" id="imgdish">
+            <br>
+            <script>
+                    for(let i=0; i<JSON.parse(localStorage.getItem('dish')).length;i++){
+                        if(JSON.parse(localStorage.getItem('dish'))[i].meat==localStorage.getItem('meat')
+                        && JSON.parse(localStorage.getItem('dish'))[i].vege==localStorage.getItem('vege')
+                        && JSON.parse(localStorage.getItem('dish'))[i].sauce==localStorage.getItem('sauce')){
+                            document.getElementById("dish").innerHTML=JSON.parse(localStorage.getItem('dish'))[i].name;
+                            document.getElementById("imgdish").src=JSON.parse(localStorage.getItem('dish'))[i].img;
+                        }
+                    }
+                    
+            </script>
+        </div>
+            
+
+        <div class="divquestion">
+        <p class="question">Do you give a star to this dish ?</p>
+        
+        <form class="formstars">
+            <button class="button"id="yes" onclick="star('yes')" type="reset"><img class="imgstar"src="images/yes.png"></button>
+            <button class="button" id="no" onclick="star('no')" type="reset"><img class="imgstar"src="images/no.png"></button>
+        </form> 
+        
+        <form class="forminput">
+        <p class="textinput">what is your comment</p>
+        <div class="divinput"><input class="input" id="comment" placeholder="comment">
+        <button class="submit"onclick="getcomment(document.getElementById('comment').value)">ok</button></div>
+        </form>
+        </div>
+
+        
+        <div class="dialogue"><img id="dialogue" src="images/dialogue.png"></div>
+        <div class="divtextdialogue"><p class="text_dialogue" id="text1"></p></div>
+
+        <script>
+
+        var i = 0;
+        var txt = "Here is the dish concocted by the chef according to the ingredients chosen. It's up to you to see if you allow him to access the title of best star chef in the city. I remind you that he needs 3 stars and that your star will be decisive for him. You can leave a comment in the space above";
+        var speed = 25;
+
+        function typeWriter() {
+            if (i < txt.length) {
+            document.getElementById("text1").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+            }
+        }
+        typeWriter();
+
+        </script>
+        
+    
+    </body>
+
+</html>

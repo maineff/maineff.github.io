@@ -1,0 +1,83 @@
+<!DOCTYPE html >
+<html>
+    <head>
+        <title>Project Web Tech</title>
+        <link rel="stylesheet" href="page4_.css">
+        <script>
+            function number(value){
+                if(localStorage.getItem('random').localeCompare(value)==0)
+                {   localStorage.setItem('number',value);
+                    window.location.href="page5.html";
+                }
+                else{
+                    window.location.href="fin.html";
+                    localStorage.setItem('fin',4);
+                }
+            }
+    
+            function home(value){
+                localStorage.setItem('page',value);
+            }
+        </script>
+    </head>
+    <body>
+
+        <form action="acceuil.html"><button class="button_home"type="submit" onclick="home('4')">HOME</button></form>
+        
+        <div class="menu"><img id="menu" src="images/menu.png"></div>
+        
+    
+     <form  class="buttonform">
+         <p class="text">How many customers are seated in this room ?</heapder>
+     <br>
+         <button class="button" onclick="number(7)" type="reset">7</button>
+     <br>
+         <button class="button" onclick="number(8)" type="reset">8</button>
+     <br>
+         <button class="button" onclick="number(9)" type="reset">9</button>
+     </form>
+
+    <form class="custform">
+        <img class="cust" id="cust2" src="images/customers2.png">
+        <img class="cust" id="cust3f" src="images/customers3_females.png">
+        <img class="cust" id="cust3" src="images/customers3_males.png">
+        <img class="cust" id="cust4" src="images/customers4.png">
+    <script>
+        console.log(localStorage.getItem('random'));
+    if (localStorage.getItem('random')==7)
+    {
+        document.getElementById("cust2").style.display="none";
+        document.getElementById("cust3").style.display="none";
+
+    }else if (localStorage.getItem('random')==8){
+        document.getElementById("cust4").style.display="none";
+        
+    }else if (localStorage.getItem('random')==9){
+        document.getElementById("cust3").style.display="none";
+    }
+        
+    </script>
+
+        <div class="dialogue"><img id="dialogue" src="images/dialogue.png"></div>
+        <div class="divtextdialogue"><p class="text_dialogue" id="text1"></p></div>
+
+        <script>
+
+        var i = 0;
+        var txt = 'Count the number of customers in the room, be careful you will not have a second chance !';
+        var speed = 25;
+
+        function typeWriter() {
+            if (i < txt.length) {
+            document.getElementById("text1").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+            }
+        }
+        typeWriter();
+
+        </script>
+        
+    </body>
+
+</html>

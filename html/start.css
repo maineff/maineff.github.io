@@ -1,0 +1,36 @@
+
+body{
+    background-image: url(images/room_.png);
+    
+}
+div{
+    text-align: center;
+}
+#logo{
+    height: 250px;
+}
+.form_start{
+    text-align: center;
+}
+
+#start{
+    background-color: transparent;
+    border: none;
+    outline: none !important;
+}
+button:hover{
+    border: none;
+    outline: none !important;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.button_home{
+    background-color: black;
+    padding: 20px;
+    color: white;
+    font-size: 25px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 25%;
+    border:none;
+    outline: none !important;
+}

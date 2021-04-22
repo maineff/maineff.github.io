@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Web Tech</title>
+    <link rel="stylesheet" href="acceuil.css">
+    <script>
+        console.log("la page est "+localStorage.getItem('page'));
+        console.log("number star "+localStorage.getItem('star'));
+
+        function story(){
+            window.location.href="stacceuil.html";
+        }
+        function games(){
+            window.location.href="mgacceuil.html";
+        }
+    </script>
+    
+</head>
+<body>
+    <div class="divstar">
+        <img class="numberstars" id="0" src="images/0star.png">
+        <img class="numberstars" id="1" src="images/1star.png">
+        <img class="numberstars" id="2" src="images/2stars.png">
+    <script>
+        console.log(localStorage.getItem('star'));
+    switch (localStorage.getItem('star')) {
+        case "0":
+        document.getElementById("1").style.display="none";
+        document.getElementById("2").style.display="none";
+            break;
+        case "1":
+        document.getElementById("0").style.display="none";
+        document.getElementById("2").style.display="none";
+            break;
+        case "2":
+        document.getElementById("0").style.display="none";
+        document.getElementById("1").style.display="none";
+            break;        
+        default:
+            break;
+    }
+    </script>
+    </div> 
+
+    <div class="dialogue"><img id="dialogue" src="images/dialogue.png"></div>
+        <div class="divtextdialogue"><p class="text_dialogue" id="text1"></p></div>
+
+        <script>
+
+        var i = 0;
+        var txt = 'The aim of this text game is to become the best chef in town. For this we will need 3 stars. To get them, we have the story to follow where it will be necessary to make choices or games that will allow you to advance in the game. Good luck';
+        var speed = 25;
+
+        function typeWriter() {
+            if (i < txt.length) {
+            document.getElementById("text1").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+            }
+        }
+        typeWriter();
+
+        </script>
+
+    <form>
+        <button class="button" type="reset" onclick="story()">story</button>
+        <button class="button" type="reset" onclick="games()">games</button>
+    </form>
+</body>
+</html>

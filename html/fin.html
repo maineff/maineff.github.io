@@ -1,0 +1,73 @@
+<!DOCTYPE html >
+<html>
+    
+    <head>
+        <title>Project Web Tech</title>
+        <link rel="stylesheet" href="fin.css">
+    </head>
+    <body>
+    <div class="divlogo"><img class="logo" src="images/game_over.png"></div>
+     
+    <div class="divgender">
+        <img class="gender_choice" id="male" src="images/male_sad.png">
+        <img class="gender_choice" id="female" src="images/female_sad.png">
+    
+    <script>
+         if (localStorage.getItem('gender')=="male")
+    {
+        document.getElementById("female").style.display="none";
+        document.getElementById("male").style.display="table-cell";
+
+    }else if (localStorage.getItem('gender')=="female"){
+     
+        document.getElementById("male").style.display="none";
+        document.getElementById("female").style.display="table-cell";
+    }
+    </script>
+    </div>
+
+
+        <div class="dialogue"><img id="dialogue" src="images/dialogue.png"></div>
+        <div class="divtextdialogue"><p class="text_dialogue" id="text1"></p></div>
+
+        <script>
+        var txt;
+        var i = 0;
+        switch(localStorage.getItem('fin')){
+            
+            case"3":
+            txt ="END, You chose the wrong restaurant concept. The city is full of pizzeria, so the chef did not succeed in his mission.";
+                break;
+            case"4":
+            txt ="END, You chose the wrong restaurant concept. The city is full of sushis, so the chef did not succeed in his mission.";
+                break;
+            case"6":
+            txt ="END, you made a mistake in the design of the bad meat command! you won't become the best chef in town";
+                break;
+            case"61":
+            txt ="END, you made a mistake in the design of the bad vegetables command! you won't become the best chef in town";
+                break;
+            case"62":
+            txt ="END, you made a mistake in the design of the bad sauce command! you won't become the best chef in town";
+                break;
+            case"7":
+            txt ="END,you missed the star, you only had 3 chances you shouldn't miss one";
+                break;
+
+        }
+        var speed = 25;
+
+        function typeWriter() {
+            if (i < txt.length) {
+            document.getElementById("text1").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+            }
+        }
+        typeWriter();
+
+        </script>
+        
+    </body>
+
+</html>

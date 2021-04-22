@@ -1,0 +1,60 @@
+<!DOCTYPE html >
+<html>
+    
+    <head>
+        <title>Project Web Tech</title>
+    <link rel="stylesheet" href="page2.css">
+    <script>
+        function city(value){
+            localStorage.setItem('city',value);
+        }
+
+        function home(value){
+            localStorage.setItem('page',value);
+        }
+    </script>
+    </head>
+    <body>
+        <form action="acceuil.html"><button class="button_home"type="submit" onclick="home('2')">HOME</button></form>
+        
+        <p id="text">Wich city do you want to work?</p>
+        <form id="buttonform"action="page3.html">
+            <div class="divny">
+            <button class="button" id="ny" onclick="city('Newyork')" type="submit">New York</button>
+            <img class="newyork" src="images/ny.jpg">
+            </div>
+            <div class="divparis">
+            <button class="button" id="paris" onclick="city('Paris')" type="submit">Paris</button>
+            <img class="paris" src="images/paris.jpg">
+            </div>
+            <div class="divlondon">
+            <button class="button" id="london" onclick="city('London')" type="submit">London</button>
+            <img class="london" src="images/london.jpg">
+            </div>
+        </form>
+        <form id="vide"></form>
+        <div><img class="restaurant" src="images/restaurant.png"></div>
+        
+        <div class="dialogue"><img id="dialogue" src="images/dialogue.png"></div>
+        <div class="divtextdialogue"><p class="text_dialogue" id="text1"></p></div>
+        
+        <script>
+            
+            var i = 0;
+            var txt = 'In which city do you want to settle to become the best star chef in this city';
+            var speed = 25;
+            
+            function typeWriter() {
+              if (i < txt.length) {
+                document.getElementById("text1").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+              }
+            }
+            typeWriter();
+        
+            </script>
+        
+    </body>
+
+</html>

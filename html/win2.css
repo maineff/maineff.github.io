@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    color: white;
+    text-align: center;
+}
+p{
+    margin-top: 200px;
+}
+button{
+    border-radius: 25px;
+    color: black;
+    border: none;
+    outline: none !important;
+    background-color: white;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  button:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-filter: drop-shadow(1px 1px 0 white) 
+                    drop-shadow(-1px -1px 0 white);
+    filter:drop-shadow(1px 1px 0 white) 
+           drop-shadow(-1px -1px 0 white);
+  }

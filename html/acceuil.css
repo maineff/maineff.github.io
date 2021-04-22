@@ -1,0 +1,50 @@
+body{
+    background-color: black;
+    
+}
+.numberstars{
+    height: 80px;
+}
+.dialogue{
+    margin-top: 0px;
+    text-align: center;
+}
+#dialogue{
+    text-align: center;
+    height: 250px;
+    width: 1100px;
+}
+.divtextdialogue{
+    margin-top: -250px;
+    margin-left: 150px;
+    width: 950px;
+    height: 250px;
+}
+.text_dialogue{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    color: black;
+}
+form{
+    text-align: center;
+}
+.button{
+    background-color: white;
+    padding: 10px;
+    margin: 20px;
+    color: black;
+    border: none;
+    font-size: 100px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 25%;
+    outline: none !important;
+
+}
+.button:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-filter: drop-shadow(1px 1px 0 white) 
+                    drop-shadow(-1px -1px 0 white);
+    filter:drop-shadow(1px 1px 0 white) 
+           drop-shadow(-1px -1px 0 white);
+  }

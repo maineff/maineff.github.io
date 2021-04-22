@@ -1,0 +1,52 @@
+<!DOCTYPE html >
+<html>
+    <head>
+        <title>Project Web Tech</title>
+        <link rel="stylesheet" href="page1.css">
+        <script>
+            
+            function gender(value){
+                localStorage.setItem('gender',value);
+            }
+    
+            function home(value){
+                localStorage.setItem('page', value);
+            }
+            function randon(){
+                localStorage.setItem('random',Math.floor((Math.random() * (9 - 7 +1)) + 7));
+            }
+            randon();
+        </script>
+    </head>
+    <body >
+        <form action="acceuil.html"><button class="button_home"type="submit" onclick="home('1')">HOME</button></form>
+        
+        <p id="text">You identify as :</p>
+        <form class="form_gender" action="page2.html">
+            <button class="button" id="male"type="submit" onclick="gender('male')"><img class="img" src="images/male_.png"></button>
+            <button class="button" id="female" type="submit" onclick="gender('female')"><img class="img" src="images/female.png"></button>
+        </form>
+
+        <div class="dialogue"><img id="dialogue" src="images/dialogue.png"></div>
+        <div class="divtextdialogue"><p class="text_dialogue" id="text1"></p></div>
+        
+        <script>
+            
+            var i = 0;
+            var txt = 'Here you just have to indicate the kind of chef you want to play';
+            var speed = 25;
+            
+            function typeWriter() {
+              if (i < txt.length) {
+                document.getElementById("text1").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+              }
+            }
+            typeWriter();
+        
+            </script>
+        
+    </body>
+
+</html>

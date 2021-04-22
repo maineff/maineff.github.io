@@ -1,0 +1,125 @@
+<!DOCTYPE html >
+<html>
+    <head>
+        <title>Project Web Tech</title>
+        <link rel="stylesheet" href="page5.1.css">
+        <script>
+            function ps(){
+            console.log("pseudo 0: "+localStorage.getItem('pseudo0'));
+            console.log("pseudo 1: "+localStorage.getItem('pseudo1'));
+            console.log("pseudo 2: "+localStorage.getItem('pseudo2'));
+            console.log("comment 0: "+localStorage.getItem('comment0'));
+            console.log("comment 1: "+localStorage.getItem('comment1'));
+            console.log("comment 2: "+localStorage.getItem('comment2'));
+            
+            }
+            ps();
+            function vege(value){
+                localStorage.setItem('vege',value);
+            }
+    
+            function home(value){
+                localStorage.setItem('page',value);
+            }
+
+        
+        </script>
+    </head>
+    <body>
+        <form action="acceuil.html"><button class="button_home"type="submit" onclick="home('51')">HOME</button></form>
+    
+        <div class="divstar">
+            <img class="numberstars" id="0" src="images/0star.png">
+            <img class="numberstars" id="1" src="images/1star.png">
+            <img class="numberstars" id="2" src="images/2stars.png">
+        <script>
+            console.log(localStorage.getItem('star'));
+        switch (localStorage.getItem('star')) {
+            case "0":
+            document.getElementById("0").style.display="table-cell";
+            document.getElementById("1").style.display="none";
+            document.getElementById("2").style.display="none";
+                break;
+            case "1":
+            document.getElementById("0").style.display="none";
+            document.getElementById("1").style.display="table-cell";
+            document.getElementById("2").style.display="none";
+                break;
+            case "2":
+            document.getElementById("0").style.display="none";
+            document.getElementById("1").style.display="none";
+            document.getElementById("2").style.display="table-cell";
+                break;        
+            default:
+                break;
+        }
+        </script>
+        </div> 
+        
+        <div class="dialogue"><img id="dialogue" src="images/dialogue.png"></div>
+        <div class="divtextdialogue"><p class="text_dialogue" id="text1"></p></div>
+
+        <script>
+
+        var i = 0;
+        var txt = "In the same way let's ask him the vegetables they want";
+        var speed = 25;
+
+        function typeWriter() {
+            if (i < txt.length) {
+            document.getElementById("text1").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+            }
+        }
+        typeWriter();
+
+        </script>
+
+        <div class="menu"><img id="menu" src="images/menu.png"></div>
+ 
+        <form class="formbutton"action="page5.2.html">
+            <p class="text">What do you want ?</p>
+                <button class="button" onclick="vege('Pasta')" type="submit"><img class="vege" id="pasta" src="images/pasta.png"></button>
+            <br>
+                <button class="button" onclick="vege('Rice')" type="submit"><img class="vege" id="rice" src="images/rice.png"></button>
+            <br>
+                <button class="button" onclick="vege('Vegetables')" type="submit"><img class="vege" id="vegetables" src="images/vegetables.png"></button>
+            <br>
+                <button class="button" onclick="vege('Potatoe')" type="submit"><img class="vege" id="potaoe" src="images/potatoe.png"></button>
+            </form>
+    
+            <div class="text2">
+            <p>Pasta</p>
+            <br>
+            <p>Rice</p>
+            <br>
+            <p>Vegetables</p>
+            <br>
+            <p>Potatoe</p>
+            </div>
+
+            <div class="divcust"><img class="cust" id="cust" src="images/customers2.png">  </div>
+    
+        
+    <div class="divchef">
+        <img class="chef" id="male" src="images/male_.png">
+        <img class="chef" id="female" src="images/female.png">
+    
+    <script>
+         if (localStorage.getItem('gender')=="male")
+    {
+        document.getElementById("female").style.display="none";
+        document.getElementById("male").style.display="table-cell";
+
+    }else if (localStorage.getItem('gender')=="female"){
+     
+        document.getElementById("male").style.display="none";
+        document.getElementById("female").style.display="table-cell";
+    }
+    </script>
+    </div>
+
+    </body>
+
+</html>

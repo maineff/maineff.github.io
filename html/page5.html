@@ -1,0 +1,153 @@
+<!DOCTYPE html >
+<html>
+    <head>
+        <title>Project Web Tech</title>
+        <link rel="stylesheet" href="page5.css">
+        <script>
+            function ps(){
+            console.log("pseudo 0: "+localStorage.getItem('pseudo0'));
+            console.log("pseudo 1: "+localStorage.getItem('pseudo1'));
+            console.log("pseudo 2: "+localStorage.getItem('pseudo2'));
+            console.log("comment 0: "+localStorage.getItem('comment0'));
+            console.log("comment 1: "+localStorage.getItem('comment1'));
+            console.log("comment 2: "+localStorage.getItem('comment2'));
+            
+            }
+            ps();
+            
+            function meat(value){
+                localStorage.setItem('meat',value);
+            }
+    
+            function home(value){
+                localStorage.setItem('page',value);
+            }
+
+            function getpseudo(value){
+                switch(localStorage.getItem('star')){
+                    case "0":
+                    localStorage.setItem('pseudo0',value);
+                        break;
+                    case "1":
+                    localStorage.setItem('pseudo1',value);
+                        break;
+                    case "2":
+                    localStorage.setItem('pseudo2',value);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            function star(){
+                if(localStorage.getItem('star')=="3")
+                {
+                    window.location.href="win.html"
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="acceuil.html"><button class="button_home"type="submit" onclick="home('5')">HOME</button></form>
+        
+    <div class="divstar">
+        <img class="numberstars" id="0" src="images/0star.png">
+        <img class="numberstars" id="1" src="images/1star.png">
+        <img class="numberstars" id="2" src="images/2stars.png">
+    <script>
+        console.log(localStorage.getItem('star'));
+    switch (localStorage.getItem('star')) {
+        case "0":
+        document.getElementById("0").style.display="table-cell";
+        document.getElementById("1").style.display="none";
+        document.getElementById("2").style.display="none";
+            break;
+        case "1":
+        document.getElementById("0").style.display="none";
+        document.getElementById("1").style.display="table-cell";
+        document.getElementById("2").style.display="none";
+            break;
+        case "2":
+        document.getElementById("0").style.display="none";
+        document.getElementById("1").style.display="none";
+        document.getElementById("2").style.display="table-cell";
+            break;        
+        default:
+            break;
+    }
+    </script>
+    </div>
+    
+        <div class="dialogue"><img id="dialogue" src="images/dialogue.png"></div>
+        <div class="divtextdialogue"><p class="text_dialogue" id="text1"></p></div>
+
+        <script>
+
+        var i = 0;
+        var txt = 'Here is the first order! We will ask customers what they want for meat, just click on the corresponding buttons.You can enter your pseudo if you want';
+        var speed = 25;
+
+        function typeWriter() {
+            if (i < txt.length) {
+            document.getElementById("text1").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+            }
+        }
+        typeWriter();
+
+        </script>
+        
+
+        <div class="menu"><img id="menu" src="images/menu.png"></div>
+ 
+        <form class="forminput">
+            <p class="textinput">what is your name</p>
+            <div class="divinput"><input class="input" id="pseudo" placeholder="pseudo">
+            <button class="submit" onclick="getpseudo(document.getElementById('pseudo').value)">OK</button></div>
+        </form>
+        
+        <form class="formbutton"action="page5.1.html">
+    
+            <p class="text">What do you want ?</p>
+                <button class="button" onclick="meat('Beef')" type="submit"><img class="meat" id="beef" src="images/beef.png"></button>
+            <br>
+                <button class="button" onclick="meat('Chicken')" type="submit"><img class="meat" id="chicken" src="images/chicken.png"></button>
+            <br>
+                <button class="button" onclick="meat('Pork')" type="submit"><img class="meat" id="pork" src="images/pork.png"></button>
+            <br>
+                <button class="button" onclick="meat('Shrimp')" type="submit"><img class="meat" id="shrimp" src="images/shrimp.png"></button>
+        </form>
+    
+            <div class="text2">
+            <p>Beef</p>
+            <br>
+            <p>Chicken</p>
+            <br>
+            <p>Pork</p>
+            <br>
+            <p>Shrimp</p>
+            </div>
+
+            
+    <div class="divcust"><img class="cust" id="cust" src="images/customers2.png"> </div>
+
+    <div class="divchef">
+        <img class="chef" id="male" src="images/male_.png">
+        <img class="chef" id="female" src="images/female.png">
+    <script>
+    if (localStorage.getItem('gender')=="male")
+    {
+        document.getElementById("female").style.display="none";
+        document.getElementById("male").style.display="table-cell";
+
+    }else if (localStorage.getItem('gender')=="female"){
+     
+        document.getElementById("male").style.display="none";
+        document.getElementById("female").style.display="table-cell";
+    }
+    </script>
+    </div>
+
+    </body>
+
+</html>

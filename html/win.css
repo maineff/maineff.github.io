@@ -1,0 +1,54 @@
+
+body{
+background-color: black;
+
+}
+.divcity{
+    text-align: center;
+}
+.city_choice{
+    height: 600px;
+}
+.divgender{
+    margin-top: -420px;
+    margin-left: 100px;
+}
+.gender_choice{
+    height: 400px;
+}
+.divsmartphone{
+    margin-top: -600px;
+    margin-left: 800px;
+}
+.smartphone{
+    height: 650px;
+}
+.divpseudo{ 
+    width: 200px;
+    height: 300px;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: -600px;
+    margin-left: 930px;
+    position: relative;
+    text-align: center;
+}
+.dialogue{
+    margin-top: 100px;
+    text-align: center;
+}
+#dialogue{
+    text-align: center;
+    height: 250px;
+    width: 1100px;
+}
+.divtextdialogue{
+    margin-top: -200px;
+    margin-left: 150px;
+    width: 950px;
+}
+.text_dialogue{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    color: black;
+}

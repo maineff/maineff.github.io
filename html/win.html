@@ -1,0 +1,102 @@
+<!DOCTYPE html >
+<html>
+    
+    <head>
+        <title>Project Web Tech</title>
+        <link rel="stylesheet" href="win.css">
+    </head>
+    <body>
+        <div class="divcity">
+            <img class="city_choice" id="paris" src="images/paris.jpg">
+            <img class="city_choice" id="london"src="images/london.jpg">
+            <img class="city_choice" id="newyork" src="images/ny.jpg">
+        <script>
+        switch (localStorage.getItem('city')) {
+            case 'Paris':
+                {
+                    document.getElementById("london").style.display="none";
+                    document.getElementById("newyork").style.display="none";
+                }
+            break;
+            case 'London':
+                {
+                    document.getElementById("paris").style.display="none";
+                    document.getElementById("newyork").style.display="none";
+                }
+            break;
+            case 'Newyork':
+                {
+                    document.getElementById("paris").style.display="none";
+                    document.getElementById("london").style.display="none";
+                }
+                break;
+        
+            default:
+                break;
+        }
+    </script>
+        </div>
+        <div class="divgender">
+            <img class="gender_choice" id="male" src="images/male_.png">
+            <img class="gender_choice" id="female" src="images/female.png">
+        
+        <script>
+             if (localStorage.getItem('gender')=="male")
+        {
+            document.getElementById("female").style.display="none";
+            document.getElementById("male").style.display="table-cell";
+    
+        }else if (localStorage.getItem('gender')=="female"){
+         
+            document.getElementById("male").style.display="none";
+            document.getElementById("female").style.display="table-cell";
+        }
+        </script>
+        </div>
+
+        <div class="divsmartphone"><img class="smartphone" src="images/smartphone.png"></div>
+           
+        <div class="divpseudo">
+            <p>customer 1 :</p>
+            <p id="pseudo0"></p>
+            <p id="comment0"></p>
+            <p>customer 2 :</p>
+            <p id="pseudo1"></p>
+            <p id="comment1"></p>
+            <p>customer 3 :</p>
+            <p id="pseudo2"></p>
+            <p id="comment2"></p>
+            <script>
+                document.getElementById("pseudo0").innerHTML=localStorage.getItem('pseudo0');
+                document.getElementById("pseudo1").innerHTML=localStorage.getItem('pseudo1');
+                document.getElementById("pseudo2").innerHTML=localStorage.getItem('pseudo2');
+                document.getElementById("comment0").innerHTML=localStorage.getItem('comment0');
+                document.getElementById("comment1").innerHTML=localStorage.getItem('comment1');
+                document.getElementById("comment2").innerHTML=localStorage.getItem('comment2');
+            </script>
+        </div>
+
+       
+        <div class="dialogue"><img id="dialogue" src="images/dialogue.png"></div>
+        <div class="divtextdialogue"><p class="text_dialogue" id="text1"></p></div>
+        
+        <script>
+            
+            var i = 0;
+            var txt = 'Congratulation! You win! You have become the best chef in '+ localStorage.getItem('city')+', thanks to your concept of personalized dishes';
+            var speed = 25;
+            
+            function typeWriter() {
+              if (i < txt.length) {
+                document.getElementById("text1").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+              }
+            }
+            typeWriter();
+        
+            </script>
+    
+    </body>
+
+</html>

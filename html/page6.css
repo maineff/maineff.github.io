@@ -1,0 +1,125 @@
+body{
+    background-image: url(images/kitchen_.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: larger;
+
+}
+.button_home{
+    background-color: white;
+    padding: 20px;
+    color: black;
+    font-size: 25px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 25%;
+    border:none;
+    outline: none !important;
+}
+
+.divstar{
+    margin-top:-80px;
+    margin-left: 100px;
+}
+
+.numberstars{
+    height: 80px;
+}
+
+
+.divchoice{
+    width: 300px;
+    height: 600px;
+    text-align: center;
+}
+
+.textchoice{
+    margin-top: -500px;
+    
+}
+.choice{
+    height: 600px;
+    width: 300px;
+
+}
+.meat_choice{
+    height: 100px;
+}
+#shrimp{
+    width: 160px;
+}
+#chicken{
+    width: 160px;
+}
+.vege_choice{
+    height: 100px;
+}
+.sauce_choice{
+    height: 100px;
+}
+.chef{
+    margin-top: -600px;
+    height: 600px;
+    margin-left: 500px;
+}
+
+.menu{
+    margin-top: -650px;
+    margin-left: 680px;
+    height: 500px;
+}
+.text{
+    color: black;
+    margin-top: -400px;
+}
+.text2{
+    color: black;
+    margin-top: -330px;
+    margin-left: 830px;
+}
+.description{
+    margin-bottom: 60px;
+}
+.formbutton{
+    margin-left: 750px;
+    text-align: center;
+}
+.meat{
+    height: 80px;  
+    margin-left: 100px; 
+}
+.button{
+    background-color: transparent;
+    border: none;
+    outline: none !important;
+    margin-left: 50px;
+}
+button:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-filter: drop-shadow(1px 1px 0 white) 
+                    drop-shadow(-1px -1px 0 white);
+    filter:drop-shadow(1px 1px 0 white) 
+           drop-shadow(-1px -1px 0 white);
+}
+.dialogue{
+    margin-top: 200px;
+    text-align: center;
+}
+#dialogue{
+    text-align: center;
+    height: 200px;
+    width: 1100px;
+}
+.divtextdialogue{
+    margin-top: -200px;
+    margin-left: 150px;
+    width: 900px;
+    height: 200px;
+}
+.text_dialogue{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    color: black;
+}

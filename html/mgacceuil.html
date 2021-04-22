@@ -1,0 +1,63 @@
+<!DOCTYPE html >
+<html>
+    <head>
+        <title>Project Web Tech</title>
+        <link rel="stylesheet" href="mgacceuil_.css">
+        <script>
+            function minigame(value){
+                switch(value){
+                    case 1:
+                    window.location.href="minigame.html";
+                        break;
+                    case 2:
+                    window.location.href="minigame2.html";
+                        break;
+                    case 3:
+                    window.location.href="minigame3.html";
+                        break;
+                    default:
+                        break;
+                }
+
+            }
+        </script>
+    </head>
+    <body >
+
+        <div class="divstar">
+            <img class="numberstars" id="0" src="images/0star.png">
+            <img class="numberstars" id="1" src="images/1star.png">
+            <img class="numberstars" id="2" src="images/2stars.png">
+        <script>
+            console.log(localStorage.getItem('star'));
+        switch (localStorage.getItem('star')) {
+            case "0":
+            document.getElementById("1").style.display="none";
+            document.getElementById("2").style.display="none";
+                break;
+            case "1":
+            document.getElementById("0").style.display="none";
+            document.getElementById("2").style.display="none";
+                break;
+            case "2":
+            document.getElementById("0").style.display="none";
+            document.getElementById("1").style.display="none";
+                break;        
+            default:
+                break;
+        }
+        </script>
+        </div> 
+        
+    <form >
+        <button class="button" id="1" onclick="minigame(1)" type="reset"><p>minigame 1</p><img class="img"src="images/medium_well.png"></button>
+        <button class="button" id="2" onclick="minigame(2)" type="reset"><p>minigame 2</p><img class="img"src="images/cutplank.png"></button>
+        <button class="button" id="3" onclick="minigame(3)"  type="reset"><p>minigame 3</p><img class="img" src="images/level2.png"></button>
+    </form>
+    <form action="acceuil.html"><button class="button_back" id="back" type="submit">BACK</button></form>
+    <script>
+            
+    </script>
+    </body>
+
+</html>

@@ -1,0 +1,52 @@
+body{
+    background-image: url(images/kitchen_.jpg);
+}
+.back{
+    background-color: white;
+    padding: 20px;
+    color: black;
+    font-size: 25px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 25%;
+    border:none;
+    outline: none !important;
+  }
+  .back:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-filter: drop-shadow(1px 1px 0 white) 
+                    drop-shadow(-1px -1px 0 white);
+    filter:drop-shadow(1px 1px 0 white) 
+           drop-shadow(-1px -1px 0 white);
+  }
+.divcooking{
+    margin-top:-100px;
+    text-align: center;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+}
+.divplank{
+    margin-top: -50px;
+    text-align: center;
+}
+.plank{
+    height: 400px;
+}
+.divradio{
+    margin-left: -150px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    
+}
+.radio{
+    margin-left: 300px;
+}
+.divimg{
+    text-align: center;
+}
+.img{
+    height: 200px;
+    margin-left: 70px;
+    margin-right: 70px;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html >
+<html>
+    <head>
+        <title>Project Web Tech</title>
+        <script src="index.js"></script>
+
+        <link rel="stylesheet" href="stacceuil.css">
+
+        <script>
+            console.log("la page est"+localStorage.getItem('page'));
+            function start(){
+                window.location.href="start.html";
+            }
+            function restart(){
+                
+                switch(localStorage.getItem('page')){
+                    case "1":
+                    window.location.href="page1.html";
+                        break;
+                    case "2":
+                    window.location.href="page2.html";
+                        break;
+                    case "3":
+                    window.location.href="page3.html";
+                        break;
+                    case "4":
+                    window.location.href="page4.html";
+                        break;
+                    case "5":
+                    window.location.href="page5.html";
+                        break;
+                    case "51":
+                    window.location.href="page5.1.html";
+                        break;
+                    case "52":
+                    window.location.href="page5.2.html";
+                        break;
+                    case "6":
+                    window.location.href="page6.html";
+                        break;
+                    case "61":
+                    window.location.href="page6.1.html";
+                        break;
+                    case "62":
+                    window.location.href="page6.2.html";
+                        break;
+                    case "7":
+                    window.location.href="page7.html";
+                        break;
+                    default:
+                        break;
+                }
+            }
+        
+            </script>
+    </head>
+    <body >
+    <form >  
+        <button class="button" type="reset" onclick="start()">start</button>
+        <button class="button" type="reset" onclick="restart()">continue</button>
+    </form>
+    <form action="acceuil.html"><button class="button_back"  type="submit">BACK</button></form>
+    </body>
+
+</html>

@@ -1,0 +1,39 @@
+body{
+    background-color: black;
+    text-align: center;
+}
+form{
+    margin-top: 100px;
+}
+.button{
+    background-color: black;
+    margin: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+    outline-style: solid;
+    color:white;
+    border: none;
+    outline-color: white;
+
+}
+button:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-filter: drop-shadow(1px 1px 0 white) 
+                    drop-shadow(-1px -1px 0 white);
+    filter:drop-shadow(1px 1px 0 white) 
+           drop-shadow(-1px -1px 0 white);
+  }
+
+.button_back{
+    margin-top: -100px;
+    background-color: white;
+    padding: 20px;
+    color: black;
+    font-size: 50px;
+    border: none;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 25%;
+    outline: none !important;
+
+}

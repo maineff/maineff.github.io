@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Project Web Tech</title>
+    <link rel="stylesheet" type="text/css" href="minigame.css" media="screen" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+    />
+  </head>
+  <body>
+    <form action="mgacceuil.html"><button class="back"type="submit">BACK</button></form>
+    
+    <div class="divcooking"><p class="cooking" id="cooking">COOKING</p></div>
+    <div class="divpan"><img class="pan"src="images/pan.png"></div>
+    <div class="levels">
+      <img
+        src="images/blue.png"
+        height="175px"
+        id="levelOne"
+        class="animated rubberBand"
+        alt="Level Tiers"
+      />
+      <img
+        src="images/medium_well.png"
+        height="175px"
+        id="levelTwo"
+        class="animated rubberBand hidden"
+        alt="Level Tiers"
+      />
+      <img
+        src="images/well_done.png"
+        height="175px"
+        id="levelThree"
+        class="animated rubberBand hidden"
+        alt="Level Tiers"
+      />
+      <img
+        src="images/burnt.png"
+        height="175px"
+        id="levelFour"
+        class="animated rubberBand hidden"
+        alt="Level Tiers"
+      />
+    </div>
+    <div class="slidecontainer">
+      <input
+        type="range"
+        min="1"
+        max="100"
+        value="1"
+        class="slider"
+        id="myRange"
+      />
+    </div>
+
+    <div class="divbutton"><button class="button" name="button"onclick="myFunction()"> FINISH</button></div>
+
+    <script src="minigame.js"></script>
+  </body>
+</html>

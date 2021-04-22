@@ -1,0 +1,53 @@
+<!DOCTYPE html >
+<html>
+    <head>
+        <title>Project Web Tech</title>
+        <link rel="stylesheet" href="page3.css">
+        <script>
+            function concept(value){
+                localStorage.setItem('concept',value);
+                window.location.href="page4.html"
+            }
+            function home(value){
+                localStorage.setItem('page',value);
+            }
+            function fin(value){
+                localStorage.setItem('fin',value);
+                window.location.href="fin.html"
+            }
+        </script>
+    </head>
+    <body>
+    <form action="acceuil.html"><button class="button_home"type="submit" onclick="home('3')">HOME</button></form>
+        
+
+        <p id="text">What concept do you want to get into ?</p>
+        
+        <form class="form_button" >
+            <button class="button" type="reset" onclick="concept('Personalized')"><img src="images/personalized_shop.png"></button>>
+            <button class="button" type="reset" onclick="fin(3)"><img src="images/pizza_shop.png"></button>
+            <button class="button" type="reset" onclick="fin(3)"><img src="images/sushi_shop.png"></button>
+        </form>
+        
+        <div class="dialogue"><img id="dialogue" src="images/dialogue.png"></div>
+        <div class="divtextdialogue"><p class="text_dialogue" id="text1"></p></div>
+        
+        <script>
+            
+            var i = 0;
+            var txt = 'Be careful, a difficult choice has to be made. In the city where you are settling, the street is crowded with restaurants, unfortunately the choice will be decisive for the rest of the adventure. I therefore advise you to take a unique and innovative concept!';
+            var speed = 25;
+            
+            function typeWriter() {
+              if (i < txt.length) {
+                document.getElementById("text1").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+              }
+            }
+            typeWriter();
+        
+            </script>
+    </body>
+
+</html>

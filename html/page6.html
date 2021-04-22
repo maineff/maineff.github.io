@@ -1,0 +1,253 @@
+<!DOCTYPE html >
+<html>
+    <head>
+        <title>Project Web Tech</title>
+        <link rel="stylesheet" href="page6.css">
+        <script>
+            function ps(){
+            console.log("pseudo 0: "+localStorage.getItem('pseudo0'));
+            console.log("pseudo 1: "+localStorage.getItem('pseudo1'));
+            console.log("pseudo 2: "+localStorage.getItem('pseudo2'));
+            console.log("comment 0: "+localStorage.getItem('comment0'));
+            console.log("comment 1: "+localStorage.getItem('comment1'));
+            console.log("comment 2: "+localStorage.getItem('comment2'));
+            
+            }
+            ps();
+             function choice_meat(value){
+                if(localStorage.getItem('meat').localeCompare(value)==0)
+                {   localStorage.setItem('choice_meat',value);
+                    window.location.href="page6.1.html";
+                }
+                else{
+                    window.location.href="fin.html";
+                    localStorage.setItem('fin',6);
+                }
+            }
+    
+            function home(value){
+                localStorage.setItem('page',value);
+            }
+        </script>
+    </head>
+    <body>
+
+        <form action="acceuil.html"><button class="button_home"type="submit" onclick="home('6')">HOME</button></form>
+        
+        <div class="divstar">
+            <img class="numberstars" id="0" src="images/0star.png">
+            <img class="numberstars" id="1" src="images/1star.png">
+            <img class="numberstars" id="2" src="images/2stars.png">
+        <script>
+            console.log(localStorage.getItem('star'));
+        switch (localStorage.getItem('star')) {
+            case "0":
+            document.getElementById("0").style.display="table-cell";
+            document.getElementById("1").style.display="none";
+            document.getElementById("2").style.display="none";
+                break;
+            case "1":
+            document.getElementById("0").style.display="none";
+            document.getElementById("1").style.display="table-cell";
+            document.getElementById("2").style.display="none";
+                break;
+            case "2":
+            document.getElementById("0").style.display="none";
+            document.getElementById("1").style.display="none";
+            document.getElementById("2").style.display="table-cell";
+                break;        
+            default:
+                break;
+        }
+        </script>
+        </div>
+
+        <div class="divchoice">
+            <img class="choice" src="images/menu.png">
+            <p class="textchoice">customers' choice</p>
+            
+                <img class="meat_choice" id="beef"src="images/beef.png">
+                <img class="meat_choice" id="chicken"src="images/chicken.png">
+                <img class="meat_choice" id="pork"src="images/pork.png">
+                <img class="meat_choice" id="shrimp" src="images/shrimp.png">
+                <br>
+            <script>
+            switch (localStorage.getItem('meat')) {
+                case 'Beef':
+                    {
+                        document.getElementById("chicken").style.display="none";
+                        document.getElementById("pork").style.display="none";
+                        document.getElementById("shrimp").style.display="none";
+                    }
+                break;
+                case 'Chicken':
+                    {
+                        document.getElementById("beef").style.display="none";
+                        document.getElementById("pork").style.display="none";
+                        document.getElementById("shrimp").style.display="none";
+                    }
+                break;
+                case 'Pork':
+                    {
+                        document.getElementById("beef").style.display="none";
+                        document.getElementById("chicken").style.display="none";
+                        document.getElementById("shrimp").style.display="none";
+                    }
+                    break;
+                case 'Shrimp':
+                    {
+                        document.getElementById("beef").style.display="none";
+                        document.getElementById("chicken").style.display="none";
+                        document.getElementById("pork").style.display="none";
+                    }
+                    break;
+            
+                default:
+                    break;
+            }
+        
+        </script>
+      
+            <img class="vege_choice" id="pasta" src="images/pasta.png">
+            <img class="vege_choice"  id="rice" src="images/rice.png">
+            <img class="vege_choice"  id="vege"src="images/vegetables.png">
+            <img class="vege_choice"  id="potatoe"src="images/potatoe.png">
+            <br>
+        <script>
+            switch (localStorage.getItem('vege')) {
+                case 'Pasta':
+                    {
+                        document.getElementById("rice").style.display="none";
+                        document.getElementById("vege").style.display="none";
+                        document.getElementById("potatoe").style.display="none";
+                    }
+                break;
+                case 'Rice':
+                    {
+                        document.getElementById("pasta").style.display="none";
+                        document.getElementById("vege").style.display="none";
+                        document.getElementById("potatoe").style.display="none";
+                    }
+                break;
+                case 'Vegetables':
+                    {
+                        document.getElementById("pasta").style.display="none";
+                        document.getElementById("rice").style.display="none";
+                        document.getElementById("potatoe").style.display="none";
+                    }
+                    break;
+                case 'Potatoe':
+                    {
+                        document.getElementById("pasta").style.display="none";
+                        document.getElementById("rice").style.display="none";
+                        document.getElementById("vege").style.display="none";
+                    }
+                    break;
+            
+                default:
+                    break;
+                }
+            </script>
+                <img class="sauce_choice" id="curry" src="images/curry.png">
+                <img class="sauce_choice"id="tomatoe" src="images/tomatoe.png">
+                <img class="sauce_choice"id="cream" src="images/cream.png">
+                <img class="sauce_choice" id="soja"src="images/soja.png">
+            <script>
+                switch (localStorage.getItem('sauce')) {
+                    case 'Curry':
+                        {
+                            document.getElementById("tomatoe").style.display="none";
+                            document.getElementById("cream").style.display="none";
+                            document.getElementById("soja").style.display="none";
+                        }
+                    break;
+                    case 'Tomatoe':
+                        {
+                            document.getElementById("curry").style.display="none";
+                            document.getElementById("cream").style.display="none";
+                            document.getElementById("soja").style.display="none";
+                        }
+                    break;
+                    case 'Cream':
+                        {
+                            document.getElementById("curry").style.display="none";
+                            document.getElementById("tomatoe").style.display="none";
+                            document.getElementById("soja").style.display="none";
+                        }
+                        break;
+                    case 'Soja':
+                        {
+                            document.getElementById("curry").style.display="none";
+                            document.getElementById("tomatoe").style.display="none";
+                            document.getElementById("cream").style.display="none";
+                        }
+                        break;
+                
+                    default:
+                        break;
+                    }
+            </script>
+        </div>
+
+        <div class="divchef">
+            <img class="chef" id="male" src="images/male_.png">
+            <img class="chef" id="female" src="images/female.png">
+        
+        <script>
+             if (localStorage.getItem('gender')=="male")
+        {
+            document.getElementById("female").style.display="none";
+            document.getElementById("male").style.display="table-cell";
+    
+        }else if (localStorage.getItem('gender')=="female"){
+         
+            document.getElementById("male").style.display="none";
+            document.getElementById("female").style.display="table-cell";
+        }
+        </script>
+        </div>
+        
+
+        <div class="menu"><img id="menu" src="images/menu.png"></div>
+        
+        <form class="formbutton">
+        <p class="text">Reproduce receipe please</p>
+            <button class="button" onclick="choice_meat('Beef')" type="reset"><img class="meat" src="images/beef.png"></button>
+        <br>
+            <button class="button" onclick="choice_meat('Chicken')" type="reset"><img class="meat"  src="images/chicken.png"></button>
+        <br>
+            <button class="button" onclick="choice_meat('Pork')" type="reset"><img class="meat"  src="images/pork.png"></button>
+        <br>
+            <button class="button" onclick="choice_meat('Shrimp')" type="reset"><img class="meat"  src="images/shrimp.png"></button>
+        </form>
+
+        <div class="text2">
+        <p class="description">Beef</p>
+        <p class="description">Chicken</p>
+        <p class="description">Pork</p>
+        <p class="description">Shrimp</p>
+        </div>
+        
+        <div class="dialogue"><img id="dialogue" src="images/dialogue.png"></div>
+        <div class="divtextdialogue"><p class="text_dialogue" id="text1"></p></div>
+
+        <script>
+
+        var i = 0;
+        var txt = "Let's go to the kitchen, it's time to reproduce the order don't make a mistake it could be fatal for you";
+        var speed = 25;
+
+        function typeWriter() {
+            if (i < txt.length) {
+            document.getElementById("text1").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+            }
+        }
+        typeWriter();
+
+        </script>
+       
+    </body>
+
+</html>

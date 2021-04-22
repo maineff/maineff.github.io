@@ -1,0 +1,74 @@
+
+<!DOCTYPE html >
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<link rel="stylesheet" href="minigame3.css">
+<title>Project Web Tech</title>
+</head>
+<body>
+    <form action="mgacceuil.html"><button class="back"type="submit">BACK</button></form>
+<form class="forminput"><input class="input"type="number" id="imageName" min="1" max="5"></form>
+<div class="divbutton"><button class="button" name="button"onclick="myFunction()"> Finish</button></div>
+<div id="imageDiv"></div>
+   
+
+<script>
+$("#imageName").on("click", function()
+{
+var image=$("#imageName").val();
+    $("#imageDiv").html("<img class='img' src='images/level"+image+".png'></img>");
+});
+
+function myFunction() {
+    var value=document.getElementById('imageName').value;
+    switch (value) {
+        case "1":
+        document.location.href="fin2.html";
+            localStorage.setItem('fin2',"level1");
+            break;
+        case "2":
+            document.location.href="fin2.html";
+            localStorage.setItem('fin2',"level2");
+            break;
+        case "3":
+        localStorage.setItem('win2',"level3");
+            switch(localStorage.getItem('star'))
+            {
+              case "0":
+                document.location.href="win2.html";
+                localStorage.setItem('star',"1");
+                break;
+              case "1":
+                document.location.href="win2.html";
+                localStorage.setItem('star',"2");
+                break;
+              case "2":
+                document.location.href="win2.html";
+                localStorage.setItem('star',"3");
+                break;
+              default:
+                break;
+            }
+            break;
+        case "4":
+            document.location.href="fin2.html";
+            localStorage.setItem('fin2',"level4");
+            break;
+        case "5":
+            document.location.href="fin2.html";
+            localStorage.setItem('fin2',"level5");
+            break;
+    
+        default:
+            break;
+    }
+    
+}
+
+
+
+</script>
+</body>
+</html>
+</html>

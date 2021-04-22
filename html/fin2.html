@@ -1,0 +1,49 @@
+<!DOCTYPE html >
+<html>
+    
+    <head>
+        <title>Project Web Tech</title>
+        <link rel="stylesheet" href="fin2.css">
+    </head>
+    <body>
+      <p class='text_dialogue' id='text'></p>
+  <script>
+    switch(localStorage.getItem('fin2')){
+        case"blue":
+            document.getElementById("text").innerHTML="You loose you don't win a star, your meat is blue";
+            break;
+        case"medium well":
+            document.getElementById("text").innerHTML="You loose you don't win a star, your meat is medium well is not perfect";
+            break;
+        case"burnt":
+            document.getElementById("text").innerHTML="You loose you don't win a star, your meat is burnt";
+            break;
+        case"cube":
+            document.getElementById("text").innerHTML="You loose you don't win a star, your cut is not the same as on the plank";
+            break;
+        case"stick":
+            document.getElementById("text").innerHTML="You loose you don't win a star, your cut is not the same as on the plank";
+            break;
+        case"level1":
+            document.getElementById("text").innerHTML="You loose you don't win a star, you did not put enough sauce";
+            break;
+        case"level2":
+            document.getElementById("text").innerHTML="You loose you don't win a star, you did not put enough sauce";
+            break;
+        case"level4":
+            document.getElementById("text").innerHTML="You loose you don't win a star, you put too much sauce";
+            break;
+        case"level5":
+            document.getElementById("text").innerHTML="You loose you don't win a star, you put too much sauce";
+            break;
+          default:
+            break;
+
+    }
+    </script>
+    <form action="acceuil.html">
+      <button id="acceuil" type="submit">acceuil</button>
+      </form>
+    </body>
+
+</html>
