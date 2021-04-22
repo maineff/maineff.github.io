@@ -10,15 +10,14 @@
     <form action="mgacceuil.html"><button class="back"type="submit">BACK</button></form>
 <div class="forminput"><input class="input"type="number" id="imageName" min="1" max="5"></div>
 <div class="divbutton"><button class="button" name="button"onclick="myFunction()"> Finish</button></div>
-<div id="imageDiv"></div>
-   
+<div><img id="imageDiv" class="img"></div>
 
 <script>
-$("#imageName").on("click", function()
-{
-var image=$("#imageName").val();
-    $("#imageDiv").html("<img class='img' src='images/level"+image+".png'></img>");
-});
+    var img=document.getElementById('imageDiv');
+    var temp=document.getElementById('imageName').addEventListener('click', () => {
+    img.setAttribute("src","images/level"+document.getElementById('imageName').value +".png");
+    console.log(document.getElementById('imageName').value);
+ });
 
 function myFunction() {
     var value=document.getElementById('imageName').value;
