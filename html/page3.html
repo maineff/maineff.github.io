@@ -1,7 +1,7 @@
 <!DOCTYPE html >
 <html>
     <head>
-        <title>Project Web Tech</title>
+        <title>Cooking Town</title>
         <link rel="stylesheet" href="page3.css">
         <script>
             function concept(value){
@@ -11,9 +11,9 @@
             function home(value){
                 localStorage.setItem('page',value);
             }
-            function fin(value){
-                localStorage.setItem('fin',value);
-                window.location.href="fin.html"
+            function end(value){
+                localStorage.setItem('end',value);
+                window.location.href="end.html"
             }
         </script>
     </head>
@@ -25,8 +25,8 @@
         
         <form class="form_button" >
             <button class="button" type="reset" onclick="concept('Personalized')"><img src="images/personalized_shop.png"></button>>
-            <button class="button" type="reset" onclick="fin(3)"><img src="images/pizza_shop.png"></button>
-            <button class="button" type="reset" onclick="fin(3)"><img src="images/sushi_shop.png"></button>
+            <button class="button" type="reset" onclick="end(3)"><img src="images/pizza_shop.png"></button>
+            <button class="button" type="reset" onclick="end(3)"><img src="images/sushi_shop.png"></button>
         </form>
         
         <div class="dialogue"><img id="dialogue" src="images/dialogue.png"></div>

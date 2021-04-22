@@ -37,12 +37,12 @@ function myFunction() {
   console.log("le nombre de star est "+localStorage.getItem('star'));
     switch(cooking.innerHTML){
         case "blue":
-            document.location.href="fin2.html";
-            localStorage.setItem('fin2',"blue");
+            document.location.href="end2.html";
+            localStorage.setItem('and2',"blue");
             break;
         case "medium well":
-            document.location.href="fin2.html";
-            localStorage.setItem('fin2',"medium well");
+            document.location.href="end2.html";
+            localStorage.setItem('end2',"medium well");
         break;
         case "well done":
           localStorage.setItem('win2',"well done");
@@ -66,8 +66,8 @@ function myFunction() {
             
         break;
         case "burnt":
-            document.location.href="fin2.html";
-            localStorage.setItem('fin2',"burnt");
+            document.location.href="end2.html";
+            localStorage.setItem('end2',"burnt");
         break;
         default:
             break;

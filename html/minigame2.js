@@ -22,12 +22,12 @@ function funct(params) {
             }
             break;
         case "cube":
-            document.location.href="fin2.html";
-            localStorage.setItem('fin2',"cube");
+            document.location.href="end2.html";
+            localStorage.setItem('end2',"cube");
         break;
         case "stick":
-            ddocument.location.href="fin2.html";
-            localStorage.setItem('fin2',"stick");
+            ddocument.location.href="end2.html";
+            localStorage.setItem('end2',"stick");
         break;
     
         default:
