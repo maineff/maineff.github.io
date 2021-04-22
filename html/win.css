@@ -52,3 +52,22 @@ background-color: black;
     font-size: xx-large;
     color: black;
 }
+.button_replay{
+    background-color: white;
+    padding: 20px;
+    color: black;
+    font-size: 50px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 25%;
+    border:none;
+    outline: none !important;
+
+}
+.button_replay:hover{
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-filter: drop-shadow(1px 1px 0 white) 
+                    drop-shadow(-1px -1px 0 white);
+    filter:drop-shadow(1px 1px 0 white) 
+           drop-shadow(-1px -1px 0 white);
+}
